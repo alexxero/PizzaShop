@@ -5,19 +5,23 @@
 <% @products.each do |p| %>
     <div class="col-md-3">
       <div>
-        <%= p.title%>
+        <b><%= p.title%></b>
       </div>
 
       <div>
-        <img  src="<%= p.path_to_image%>" alt="Some Image" style="height: 300px; width: 300px;">
+        <img  src="<%= p.path_to_image%>" alt="Some Image" style="height: 200px; width: 200px;">
       </div>
 
       <div>
-        <%= p.price%>
+        <%= p.description%>
       </div>
 
       <div>
-        <%= p.size%>
+        Price: <%= p.price%> rub
+      </div>
+
+      <div>
+        Size: <%= p.size%> cm
       </div>
 
     </div>
