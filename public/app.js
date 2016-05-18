@@ -11,4 +11,25 @@ function add_to_cart(id) {
 
     x = x * 1 + 1;
     window.localStorage.setItem(key, x);
+    get_number_products();
+}
+
+function get_number_products() {
+    var total = 0;
+
+    for (var i = 0; i < window.localStorage.length; i++) {
+        var key = window.localStorage.key(i);
+
+        if (key.search('product_')>= 0)
+        {
+            total = total*1 + window.localStorage[key]*1;
+        }
+    }
+    document.getElementById('basket').innerHTML = "Your basket contains " + total + " items";
+}
+
+function basket_clear() {
+    total = 0;
+    localStorage.clear();
+    document.getElementById('basket').innerHTML = "Your basket contains " + total + " items";
 }
