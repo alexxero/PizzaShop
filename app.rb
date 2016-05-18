@@ -18,3 +18,7 @@ end
 get '/about' do
   erb :about
 end
+
+after do
+  ActiveRecord::Base.connection.close
+end
