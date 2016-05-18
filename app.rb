@@ -19,6 +19,10 @@ get '/about' do
   erb :about
 end
 
+post '/cart' do
+ erb "Hello World"
+end
+
 after do
   ActiveRecord::Base.connection.close
 end
