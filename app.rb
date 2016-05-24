@@ -18,19 +18,18 @@ end
 get '/about' do
   erb :about
 end
-
-get '/cart' do
-  erb :cart
-end
+#
+# get '/cart' do
+#   erb :cart
+# end
 
 post '/cart' do
   orders_input = params[:orders]
   @orders = pars_orders_line orders_input
- erb "#{@orders.inspect} Test"
+ erb :cart
 end
 
 def pars_orders_line orders_input
-
   s1 = orders_input.split(",")
   arr = []
   s1.each {|x|
