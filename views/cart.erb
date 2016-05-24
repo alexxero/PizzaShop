@@ -35,4 +35,20 @@
   </tbody>
 </table>
 
-<p></p>
+<form class="form-horizontal" action="/place_order" method="post">
+  <div class="form-group">
+    <label for="exampleInputName2">Name</label>
+    <input name="order[name]" type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">Phone</label>
+    <input name="order[phone]" type="text" class="form-control" id="exampleInputEmail2" placeholder="+7(---)-------">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">Address</label>
+    <textarea name="order[address]" class="form-control" id="exampleInputEmail2" placeholder="5th Avenue 1902"></textarea>
+  </div>
+  <div class="form-group">
+  <button type="submit" class="btn btn-primary">Send order</button>
+  </div>
+</form>
