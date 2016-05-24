@@ -36,6 +36,9 @@
 </table>
 
 <form class="form-horizontal" action="/place_order" method="post">
+
+  <input name="order[orders_input]" type="hidden" value="<%= @orders_input %>" />
+
   <div class="form-group">
     <label for="exampleInputName2">Name</label>
     <input name="order[name]" type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
