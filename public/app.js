@@ -37,6 +37,7 @@ function basket_clear() {
     localStorage.clear();
     document.getElementById('basket').innerHTML = "Your basket contains " + total + " items";
     update_input_orders();
+    update_orders_button();
 }
 
 function get_number_of_orders() {
@@ -62,4 +63,9 @@ function update_input_orders() {
 function update_orders_button(){
     var text = 'Cart (' + get_number_of_products() + ')';
     $('#orders_button').val(text);
+}
+
+function cart_display() {
+    var total = get_number_of_products();
+    $('#table').val(total);
 }
