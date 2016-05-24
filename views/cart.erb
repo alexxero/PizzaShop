@@ -1,31 +1,31 @@
 <h3>Your cart:</h3>
 
-<%= @items.inspect %>
+<% @items.inspect %>
 
 
 
-<!--<table id="table" class="table table-striped">-->
-  <!--<tr>-->
-    <!--<th>Pizza</th>-->
-    <!--<th>Qty.</th>-->
-    <!--<th>Price</th>-->
-    <!--<th>Name</th>-->
-    <!--<th>Phone</th>-->
-  <!--</tr>-->
-  <!--<tr>-->
-    <!--<td id="pizza_name">e</td>-->
-    <!--<td id="pizza-quantity">x</td>-->
-    <!--<td id="cost">a</td>-->
-    <!--<td id="name">m</td>-->
-    <!--<td id="phone">p</td>-->
-  <!--</tr>-->
-  <!--<tr>-->
-    <!--<td>key</td>-->
-    <!--<td>x</td>-->
-    <!--<td>a</td>-->
-    <!--<td>m</td>-->
-    <!--<td>p</td>-->
-  <!--</tr>-->
-<!--</table>-->
+<table id="table" class="table table-striped">
+  <thead>
+    <tr>
+      <th>Pizza</th>
+      <th>Price</th>
+      <th>Qty.</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <% @items.each do |item| %>
+
+    <tr>
+      <td><%=item[0].title%></td>
+      <td><%=item[0].price%></td>
+      <td><%=item[1]%></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <%end%>
+  </tbody>
+</table>
 
 <p></p>
