@@ -64,6 +64,12 @@ function update_orders_button(){
     var text = 'Cart (' + get_number_of_products() + ')';
     $('#orders_button').val(text);
 }
+
+function cancel_order() {
+    alert('Aaa');
+    return false;
+}
+
 //
 // function cart_display() {
 //     var total = get_number_of_products();
