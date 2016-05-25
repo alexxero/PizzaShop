@@ -66,7 +66,9 @@ function update_orders_button(){
 }
 
 function cancel_order() {
-    alert('Aaa');
+    window.localStorage.clear();
+    update_input_orders();
+    update_orders_button()
     return false;
 }
 
