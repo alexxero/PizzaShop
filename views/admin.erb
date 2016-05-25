@@ -1,0 +1,9 @@
+<h2>Orders list so far</h2>
+
+<% @orderslist.each do |order| %>
+
+    <ul>
+      <li>Name: <%= order.name %>, phone: <%= order.phone %>, address: <%= order.address%>, order: <%= order.order %></li>
+    </ul>
+
+<%end%>

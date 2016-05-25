@@ -58,8 +58,13 @@ end
 post '/place_order' do
   @o = Order.new params[:order]
   @o.save
-  @orderslist = Order.order "created_at DESC"
+   # @orderslist = Order.order "created_at DESC"
   erb :orders
+end
+
+get '/admin' do
+  @orderslist = Order.order "created_at DESC"
+  erb :admin
 end
 
 after do
