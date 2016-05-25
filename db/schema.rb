@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20160525084711) do
     t.text     "name"
     t.text     "phone"
     t.text     "address"
+    t.text     "order"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

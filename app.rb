@@ -11,7 +11,9 @@ class Product < ActiveRecord::Base
 end
 
 class Order < ActiveRecord::Base
-
+  validates :name, presence: true, length: {minimum: 3}
+  validates :phone, presence: true
+  validates :address, presence: true
 end
 
 get '/' do
@@ -51,6 +53,12 @@ def pars_orders_line orders_input
     arr.push arr2
   }
   arr
+end
+
+post '/place_order' do
+  @o = Order.new params[:order]
+  @o.save
+  erb "Your order is placed"
 end
 
 after do
