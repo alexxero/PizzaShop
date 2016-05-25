@@ -1,0 +1,15 @@
+<script>
+  $(function () {
+    basket_clear();
+  });
+</script>
+
+<h3>List of orders</h3>
+
+<% @orderslist.each do |order| %>
+
+    <ul>
+      <li>Name: <%= order.name %>, phone: <%= order.phone %>, address: <%= order.address%>, order: <%= order.order %></li>
+    </ul>
+
+<%end%>

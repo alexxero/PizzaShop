@@ -58,7 +58,8 @@ end
 post '/place_order' do
   @o = Order.new params[:order]
   @o.save
-  erb "Your order is placed"
+  @orderslist = Order.order "created_at DESC"
+  erb :orders
 end
 
 after do
